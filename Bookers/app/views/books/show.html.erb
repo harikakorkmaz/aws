@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+  <html>
+    <head>
+      <meta charset="UTF-8">
+      <link rel="stylesheets" href="books.scss">
+    </head>
+    <body>
+      <% if flash[:notice] %>
+      <p class="notice"><%= flash[:notice] %></p>
+      <% end %>
+      <p><strong>Title: </strong><%= @book.title %></p>
+      <p><strong>Body: </strong><%= @book.body %></p>
+      <div class="button">
+        <%= link_to "Edit", edit_book_path(@book), {class: "contents"} %></a>
+        <span>|</span>
+        <a class="contents" href="/books">Back</a>
+      </div>
+    </body>
+  </html>
